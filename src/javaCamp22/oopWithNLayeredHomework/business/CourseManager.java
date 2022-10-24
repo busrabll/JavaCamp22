@@ -20,14 +20,14 @@ public class CourseManager {
 
 	public void add(Course course) throws Exception {
 
+		if (course.getPrice() <= 0) {
+			throw new Exception("Course price cannot be less than 0");
+		}
+		
 		for (Course myCourse : courses) {
 
 			if (myCourse.getName().equals(course.getName())) {
 				throw new Exception("Course names cannot be the same.");
-			}
-
-			if (course.getPrice() < 0) {
-				throw new Exception("Course price cannot be less than 0.");
 			}
 		}
 

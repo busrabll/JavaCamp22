@@ -19,7 +19,7 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 
-		Course course1 = new Course(1, "Java Course", 0);
+		Course course1 = new Course(1, "Java Course", 10);
 		Logger[] loggers = { new DatabaseLogger() };
 		List<Course> courses = new ArrayList<>();
 		CourseManager courseManager = new CourseManager(new JdbcCourseDao(), loggers, courses);
